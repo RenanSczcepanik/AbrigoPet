@@ -10,22 +10,22 @@
                     {!! Form::open(['method' => 'post', 'route' => ['back.profile'], 'files' => true]) !!}
                         <div class="row">
                             <div class="col-md-6">
-                                {!! Form::openGroup('name', trans('dictionary.name')) !!}
-                                {!! Form::text('name', auth()->user()->name) !!}
+                                {!! Form::openGroup('name', trans('dictionary.name'), ['style' => 'width:280px;']) !!}
+                                {!! Form::text('name', auth()->user()->name, ['style' => 'width:280px;']) !!}
                                 {!! Form::closeGroup() !!}
                             </div>
 
                             <div class="col-md-6">
-                                {!! Form::openGroup('email', trans('dictionary.email')) !!}
-                                {!! Form::email('email', auth()->user()->email) !!}
+                                {!! Form::openGroup('email', trans('dictionary.email'), ['style' => 'width:280px;']) !!}
+                                {!! Form::email('email', auth()->user()->email, ['style' => 'width:280px;']) !!}
                                 {!! Form::closeGroup() !!}
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12">
-                                {!! Form::openGroup('picture', trans('dictionary.picture')) !!}
-                                {!! Form::file('picture') !!}
+                                {!! Form::openGroup('picture', trans('dictionary.picture'), ['style' => 'width:280px;']) !!}
+                                {!! Form::file('picture', ['style' => 'width:280px;']) !!}
                                 {!! Form::closeGroup() !!}
                             </div>
                         </div>
@@ -35,14 +35,14 @@
 
                         <div class="row">
                             <div class="col-md-6">
-                                {!! Form::openGroup('password', trans('dictionary.password')) !!}
-                                {!! Form::password('password') !!}
+                                {!! Form::openGroup('password', trans('dictionary.password'), ['style' => 'width:280px;']) !!}
+                                {!! Form::password('password', ['style' => 'width:280px;']) !!}
                                 {!! Form::closeGroup() !!}
                             </div>
 
                             <div class="col-md-6">
-                                {!! Form::openGroup('password_confirmation', trans('auth.password-confirmation')) !!}
-                                {!! Form::password('password_confirmation') !!}
+                                {!! Form::openGroup('password_confirmation', trans('auth.password-confirmation'), ['style' => 'width:280px;']) !!}
+                                {!! Form::password('password_confirmation', ['style' => 'width:280px;']) !!}
                                 {!! Form::closeGroup() !!}
                             </div>
                         </div>
@@ -56,7 +56,8 @@
         <div class="col-md-4">
             <div class="card card-user">
                 <div class="image">
-                    <img src="/img/full-screen-image-{{ $background }}.jpg" />
+                  <!-- src="/img/full-screen-image-{{ $background }}.jpg" -->
+                    <img  />
                 </div>
                 <div class="content">
                     <div class="author">

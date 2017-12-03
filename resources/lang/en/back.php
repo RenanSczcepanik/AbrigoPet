@@ -5,9 +5,22 @@ return [
     'dashboard' => 'Dashboard',
     'profile' => 'Profile',
     'users' => [
-        'create' => 'Create new user'
+        'create' => 'Criar Novo Usuário'
     ],
     'contacts' => [
         'create' => 'Create new contact'
-    ]
+    ],
+    'animals' => [
+        'create' => 'Criar Novo Animal'
+    ],
+    'racas' => [
+        'create' => 'Criar Nova Raça'
+    ],
+    'adocaos' => [
+        'create' => 'Criar Nova Adoção'
+    ],
+    'adotantes' => [
+        'create' => 'Criar Novo Adotante'
+    ],
+
 ];

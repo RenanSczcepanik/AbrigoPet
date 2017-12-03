@@ -4,11 +4,13 @@
     <div class="flex-center position-ref full-height">
         <div class="content">
             <div class="title m-b-md">
-                <img src="/img/logo.png" width="100%" />
+                <img src="img/cachorrinho.jpg" width="100%" />
             </div>
 
             <div class="links">
-                <a href="/login">Login</a>
+              <a href="/login" style="
+              color: #030303;
+                ">Login</a>
             </div>
         </div>
     </div>

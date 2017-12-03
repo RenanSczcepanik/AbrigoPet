@@ -19,10 +19,12 @@ class CreateAdotantesTable extends Migration
             $table->string('fone_fixo');
             $table->string('fone_celular');
             $table->string('email')->unique();
-            $table->boolean('impedimento');
-            $table->string('motivo_imped');
-            $table->integer('id_endereco')->unsigned();
-            $table->foreign('id_endereco')->references('id')->on('enderecos')->onDelete('cascade');
+            $table->string('rua');
+            $table->string('numero');
+            $table->string('cep');
+            $table->string('bairro');
+            $table->string('cidade');
+            $table->string('estado');
             $table->timestamps();
         });
     }

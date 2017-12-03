@@ -16,7 +16,8 @@ class CreateAdocaosTable extends Migration
         Schema::create('adocaos', function (Blueprint $table) {
             $table->increments('id');
             $table->datetime('dt_adocao');
-            $table->datetime('dt_devolucao');
+            $table->datetime('dt_devolucao')->nullable();
+            $table->boolean('adocao')->nullable();
             $table->integer('id_user')->unsigned();
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
             $table->integer('id_adotante')->unsigned();

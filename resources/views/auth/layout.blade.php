@@ -12,7 +12,7 @@
     </nav>
 
     <div class="wrapper wrapper-full-page">
-        <div class="full-page login-page" data-color="black " data-image="/img/full-screen-image-{{ $background }}.jpg">
+        <div class="full-page login-page" data-color="black " data-image="/img/cachorrinho.jpg">
             <div class="content">
                 <div class="container">
                     <div class="row">

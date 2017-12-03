@@ -24,6 +24,18 @@ class Back
 
             # Contacts
             $router->resource('contacts', 'ContactsController');
+
+            # Adotantes
+            $router->resource('adotantes', 'AdotantesController');
+
+            # racas
+            $router->resource('racas', 'RacasController');
+
+            # racas
+            $router->resource('animals', 'AnimalsController');
+
+            # adocoes
+            $router->resource('adocaos', 'AdocaosController');
         });
     }
 }

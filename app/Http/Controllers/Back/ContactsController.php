@@ -46,6 +46,7 @@ class ContactsController extends Controller
 
             flash(trans('messages.success'), 'success');
         } catch (\Exception $e) {
+            flash('e');
             flash(trans('messages.exception'), 'danger');
         }
 

@@ -1,7 +1,12 @@
-<div class="sidebar" data-color="black" data-image="/img/full-screen-image-{{ $background }}.jpg">
+<div class="sidebar" data-color="black">
     <div class="logo">
         <a href="{{ route('back.dashboard') }}" class="logo-text">
-            <img src="/img/logo-white.png" height="40"/>
+          <span style="
+  width: 100%;
+  font-size: xx-large;
+  color: #fff;
+  font-weight: 900;
+">Abrigo Pet</span>
         </a>
     </div>
 
@@ -25,10 +30,24 @@
         </div>
 
         <ul class="nav">
-            <li class="{{ Route::is('back.contacts.index') ? 'active' : '' }}">
-                <a href="{{ route('back.contacts.index') }}">
+            <li class="{{ Route::is('back.adotantes.index') ? 'active' : '' }}">
+                <a href="{{ route('back.adotantes.index') }}">
                     <i class="fa fa-address-book"></i>
-                    <p>@lang('dictionary.contacts')</p>
+                    <p>@lang('dictionary.adotantes')</p>
+                </a>
+            </li>
+
+            <li class="{{ Route::is('back.adocoes.index') ? 'active' : '' }}">
+                <a href="{{ route('back.adocaos.index') }}">
+                  <i><img style="width:100%;" src="/img/tick-inside-circle.png" /></i>
+                    <p>@lang('dictionary.adocaos')</p>
+                </a>
+            </li>
+
+            <li class="{{ Route::is('back.adocaos.show') ? 'active' : '' }}">
+                <a href="/back/adocaos/abdicar">
+                  <i><img style="width:100%;" src="/img/thumb-down.png" /></i>
+                    <p>@lang('dictionary.abdicar')</p>
                 </a>
             </li>
 
@@ -36,6 +55,20 @@
                 <a href="{{ route('back.users.index') }}">
                     <i class="fa fa-users"></i>
                     <p>@lang('dictionary.users')</p>
+                </a>
+            </li>
+
+            <li class="{{ Route::is('back.animals.index') ? 'active' : '' }}">
+                <a href="{{ route('back.animals.index') }}">
+                  <i><img style="width:100%;" src="/img/dog.png" /></i>
+                    <p>@lang('dictionary.animals')</p>
+                </a>
+            </li>
+
+            <li class="{{ Route::is('back.racas.index') ? 'active' : '' }}">
+                <a href="{{ route('back.racas.index') }}">
+                    <i><img style="width:100%;" src="/img/animal-prints.png"/></i>
+                    <p>@lang('dictionary.racas')</p>
                 </a>
             </li>
 
