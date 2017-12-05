@@ -18,7 +18,7 @@
                                 <th>@lang('dictionary.adotante')</th>
                                 <th>@lang('dictionary.animal')</th>
                                 <th>@lang('dictionary.user')</th>
-                                <th>@lang('dictionary.dt_adocao')</th>
+                                <th>@lang('dictionary.dt_devolucao')</th>
                                 <th width="10%">&nbsp;</th>
                             </tr>
                         </thead>
@@ -42,13 +42,13 @@
                                       <td>{{ $user->name }}</td>
                                     @endif
                                     @endforeach
-                                    <td>{{ $adocao->dt_adocao }}</td>
+                                    <td>{{ $adocao->dt_devolucao }}</td>
                                     <td class="td-actions">
-                                        {!! Form::open(['method' => 'get', 'route' => ['back.adocaos.edit', $adocao->id]]) !!}
+                                        <!-- {!! Form::open(['method' => 'get', 'route' => ['back.adocaos.edit', $adocao->id]]) !!}
                                         <button class="btn btn-default btn-xs">
                                             <i class="fa fa-pencil"></i>
                                         </button>
-                                        {!! Form::close() !!}
+                                        {!! Form::close() !!} -->
 
                                         {!! Form::open(['method' => 'delete', 'route' => ['back.adocaos.destroy', $adocao->id], 'data-confirm' => trans('messages.confirm'), 'data-title' => trans('messages.confirm-title'), 'data-type' => 'warning']) !!}
                                         <button class="btn btn-danger btn-xs">
