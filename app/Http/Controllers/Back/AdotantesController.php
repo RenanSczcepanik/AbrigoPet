@@ -36,7 +36,8 @@ class AdotantesController extends Controller
   public function store(AdotanteRequest $request)
   {
       try {
-
+           $impedimento = 0;
+           $request->request->add(['impedimento' => $impedimento]);
            $adotante = $request->all();
            Adotante::create($adotante);
 

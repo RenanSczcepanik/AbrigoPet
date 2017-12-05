@@ -19,15 +19,15 @@
                         <div class="row">
                             <div class="col-md-12">
                               {!! Form::openGroup('dt_adocao', trans('dictionary.dt_adocao')) !!}
-                              {!! Form::date('dt_adocao', new \Carbon\Carbon($adocao->dt_adocao)) !!}
+                              {!! Form::date('dt_adocao', new \Carbon\Carbon($adocao->dt_adocao), ['disabled']) !!}
                               {!! Form::closeGroup() !!}
 
                               {!! Form::openGroup('id_adotante', trans('dictionary.id_adotante')) !!}
-                              {!! Form::select('id_adotante', \App\Models\Adotante::orderBy('nome')->pluck('nome', 'id')->toArray(), $adocao->id_adotante) !!}
+                              {!! Form::select('id_adotante', \App\Models\Adotante::orderBy('nome')->pluck('nome', 'id')->toArray(), $adocao->id_adotante,['disabled']) !!}
                               {!! Form::closeGroup() !!}
 
                               {!! Form::openGroup('id_animal', trans('dictionary.id_animal')) !!}
-                              {!! Form::select('id_animal', \App\Models\Animal::orderBy('nome')->where('adotado', 0)->pluck('nome', 'id')->toArray(), $adocao->id_animal) !!}
+                              {!! Form::select('id_animal', \App\Models\Animal::orderBy('nome')->pluck('nome', 'id')->toArray(), $adocao->id_animal, ['disabled']) !!}
                               {!! Form::closeGroup() !!}
                             </div>
                         </div>

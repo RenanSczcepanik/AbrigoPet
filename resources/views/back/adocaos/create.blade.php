@@ -23,9 +23,9 @@
                                 {!! Form::closeGroup() !!}
 
                                 {!! Form::openGroup('id_adotante', trans('dictionary.id_adotante')) !!}
-                                {!! Form::select('id_adotante', \App\Models\Adotante::orderBy('nome')->pluck('nome', 'id')->toArray()) !!}
+                                {!! Form::select('id_adotante', \App\Models\Adotante::orderBy('nome')->where('impedimento', 0)->pluck('nome', 'id')->toArray()) !!}
                                 {!! Form::closeGroup() !!}
-                                
+
                                 {!! Form::openGroup('id_animal', trans('dictionary.id_animal')) !!}
                                 {!! Form::select('id_animal', \App\Models\Animal::orderBy('nome')->where('adotado', 0)->pluck('nome', 'id')->toArray()) !!}
                                 {!! Form::closeGroup() !!}

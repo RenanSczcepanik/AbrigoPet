@@ -49,13 +49,14 @@ class AdocaosController extends Controller
 
   public function store(AdocaoRequest $request)
   {
-       try {
+        try {
           $id_user = Auth::user()->id;
           $request->request->add(['id_user' => $id_user]);
+          $id_animall = $request->id_animal;
+          Animal::where('id', '=', $id_animall)->update(['adotado' => '1']);
 
           $adocao = $request->all();
           Adocao::create($adocao);
-
            flash(trans('messages.success'), 'success');
        } catch (\Exception $e) {
            flash(trans('messages.exception'), 'danger');
@@ -85,6 +86,16 @@ class AdocaosController extends Controller
   public function update(Adocao $adocao, AdocaoRequest $request)
   {
       try {
+        if ($adocao->adocao === 1) {
+          $id_adotante = $adocao->id_adotante;
+          Adotante::where('id', '=', $id_adotante)->update(['impedimento' => '1']);
+        }
+          $id_animall = $adocao->id_animal;
+          Animal::where('id', '=', $id_animall)->update(['adotado' => '0']);
+
+          $id_adotante = $adocao->id_adotante;
+          Adotante::where('id', '=', $id_adotante)->update(['impedimento' => '0']);
+
           $id = $adocao->id;
           Adocao::find($id)->update($request->all());
           flash(trans('messages.success'), 'success');
@@ -104,6 +115,8 @@ class AdocaosController extends Controller
   public function destroy(Adocao $adocao)
   {
       try {
+          $id_animall = $adocao->id_animal;
+          Animal::where('id', '=', $id_animall)->update(['adotado' => '0']);
           $adocao->delete();
 
           flash(trans('messages.success'), 'success');
