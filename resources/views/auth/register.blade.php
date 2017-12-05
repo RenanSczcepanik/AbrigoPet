@@ -8,20 +8,20 @@
         <div class="header text-center">{{ trans('dictionary.register') }}</div>
 
         <div class="content-no-padding padding-h-20">
-            {!! Form::openGroup('name', trans('dictionary.name')) !!}
-            {!! Form::text('name') !!}
+            {!! Form::openGroup('name', trans('dictionary.name'), ['style'=>'width:280px;']) !!}
+            {!! Form::text('name', null, ['style'=>'width:280px;']) !!}
             {!! Form::closeGroup() !!}
 
-            {!! Form::openGroup('email', trans('dictionary.email')) !!}
-            {!! Form::email('email') !!}
+            {!! Form::openGroup('email', trans('dictionary.email'), ['style'=>'width:280px;']) !!}
+            {!! Form::email('email', null, ['style'=>'width:280px;']) !!}
             {!! Form::closeGroup() !!}
 
-            {!! Form::openGroup('password', trans('dictionary.password')) !!}
-            {!! Form::password('password') !!}
+            {!! Form::openGroup('password', trans('dictionary.password'), ['style'=>'width:280px;']) !!}
+            {!! Form::password('password', ['style'=>'width:280px;']) !!}
             {!! Form::closeGroup() !!}
 
-            {!! Form::openGroup('password_confirmation', trans('auth.password-confirmation')) !!}
-            {!! Form::password('password_confirmation') !!}
+            {!! Form::openGroup('password_confirmation', trans('auth.password-confirmation'), ['style'=>'width:280px;']) !!}
+            {!! Form::password('password_confirmation', ['style'=>'width:280px;']) !!}
             {!! Form::closeGroup() !!}
         </div>
 
